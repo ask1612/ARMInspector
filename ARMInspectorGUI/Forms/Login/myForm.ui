@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>myForm</class>
+ <widget class="QDialog" name="myForm">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>252</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>АРМ Инспектора Вход</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#myForm
+{
+background: rgba(32, 80, 96, 100);
+border-radius: 8px;
+}
+
+QPushButton {
+color: white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+border-width: 1px;
+border-color: #339;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 10px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 100px;
+min-height: 23px;
+max-height: 23px;
+}
+QPushButton:pressed {
+    background-color: #4169E1;     
+}
+QLabel  {
+font-size: 15px;
+color: white;
+}
+
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 8px;
+ min-height: 25px;
+}
+QMessageBox QPushButton {
+color: white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+border-width: 1px;
+border-color: #339;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 10px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>40</y>
+     <width>261</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Имя</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="nameEdit">
+      <property name="placeholderText">
+       <string>имя</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Пароль</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="2">
+     <widget class="QLineEdit" name="passEdit">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>пароль</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="okButton">
+      <property name="toolTipDuration">
+       <number>-5</number>
+      </property>
+      <property name="text">
+       <string>Вход</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="cancelButton">
+      <property name="text">
+       <string>Отменить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

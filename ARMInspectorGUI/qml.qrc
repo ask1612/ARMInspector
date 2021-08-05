@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>LoginScreen.qml</file>
+        <file>LoginScreenForm.ui.qml</file>
+        <file>Icons/eye.png</file>
+        <file>ClientController.cpp</file>
+        <file>ClientController.h</file>
+        <file>CommandController.cpp</file>
+        <file>CommandController.h</file>
+        <file>main.cpp</file>
+        <file>ServerClient.cpp</file>
+        <file>ServerClient.h</file>
+        <file>ServerClientNativeAbstract.cpp</file>
+        <file>ServerClientNativeAbstract.h</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>inspectionEditForm</class>
+ <widget class="QDialog" name="inspectionEditForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>703</width>
+    <height>253</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>inspectionEditForm</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+color: white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+border-width: 1px;
+border-color: #339;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 10px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 150px;
+max-width: 150px;
+min-height: 13px;
+max-height: 13px;
+}
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 8px;
+ min-height: 30px;
+}</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>180</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Название</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>МРО</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>60</y>
+     <width>431</width>
+     <height>34</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>120</y>
+     <width>431</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+   background: qlineargradient(
+   x1:0, y1:0, x2:0, y2:1,
+   stop:0 #f9f9f9,
+   stop: 0.5 #c6c6c6,
+   stop: 0.6 #dfdfdf,
+   stop:1 #f9f9f9 );
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgb(0, 93, 168);
+   border-radius: 8px;
+   color: rgb(0, 93, 168);
+   min-width: 170px;
+   min-height: 30px;
+   padding-left: 15px;
+}
+QComboBox:on {
+   border-radius: 30px;
+   background:transparent;
+}
+QComboBox::drop-down {
+   image: url(:/bwt/downarrow.png);
+   subcontrol-position: center right;
+   margin-right: 10px;
+}
+QComboBox QAbstractItemView::item {
+   padding: 10px 10px 10px 10px;
+}
+QComboBox QAbstractItemView {
+   color: rgb(0, 93, 168);
+   background: transparent;
+}
+QComboBox QListView::item {
+   background: qradialgradient(
+   cx: 0.5, cy: -1.6, fx: 0.5, fy: 0,
+   radius: 2,
+   stop: 0 #C4C4C4,
+   stop: 1 #DBDBDB );
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgb(0, 93, 168);
+   border-radius: 20px;
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>inspectionEditForm</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>inspectionEditForm</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

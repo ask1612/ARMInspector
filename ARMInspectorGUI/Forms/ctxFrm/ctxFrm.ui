@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ctxFrm</class>
+ <widget class="QDialog" name="ctxFrm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777202</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Список дел АП</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>-9</number>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableView#tableWidget QHeaderView
+{
+    /* draw the hole hor top &amp; bottom line for the header */
+    height: 24px;
+
+    border-top: 1px solid #161618;
+    border-bottom: 1px solid #161618;
+}
+
+QTableView#tableWidget QHeaderView::section:horizontal:first
+{
+    border-left-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f4f4f6, stop:1 #ceced6);
+}
+
+QTableView#tableWidget QHeaderView::section:horizontal:last
+{
+    border-right-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f4f4f6, stop:1 #ceced6);
+}
+
+QTableView#tableWidget QHeaderView::section:horizontal
+{
+    /* for each section draw ONLY left &amp; right lines */
+    height: 24px;
+
+    border-style: none;
+
+    border-left: 1px solid #ecedef;
+    border-right: 1px solid #b1b1b5;
+
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f4f4f6, stop:1 #ceced6);
+
+ }</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>411</width>
+     <height>241</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

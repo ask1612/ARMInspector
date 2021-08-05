@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>userEditFrm</class>
+ <widget class="QDialog" name="userEditFrm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>626</width>
+    <height>472</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактирование пользователя</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+color: white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+border-width: 1px;
+border-color: #339;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 10px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}
+QPushButton:pressed {
+    background-color: #4169E1;     
+}
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 8px;
+ min-height: 30px;
+}
+QGroupBox {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 0 3px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FFOECE, stop: 1 #FFFFFF);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>581</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QLabel" name="labelName">
+      <property name="text">
+       <string>Имя пользователя</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEditName"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelInspection">
+      <property name="text">
+       <string>Инспекция</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QGroupBox" name="groupBoxRole">
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QRadioButton" name="radioButton_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>341</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Главный администратор базы данных АРМ</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>311</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Администратор МРО</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>191</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Адмиристратор РЭГИ</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>161</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Пользователь</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="labelAccess">
+      <property name="text">
+       <string>Доступ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEditFio"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBoxInspection">
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+   background: qlineargradient(
+   x1:0, y1:0, x2:0, y2:1,
+   stop:0 #f9f9f9,
+   stop: 0.5 #c6c6c6,
+   stop: 0.6 #dfdfdf,
+   stop:1 #f9f9f9 );
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgb(0, 93, 168);
+   border-radius: 8px;
+   color: rgb(0, 93, 168);
+   min-width: 170px;
+   min-height: 30px;
+   padding-left: 15px;
+}
+QComboBox:on {
+   border-radius: 30px;
+   background:transparent;
+}
+QComboBox::drop-down {
+   image: url(:/bwt/downarrow.png);
+   subcontrol-position: center right;
+   margin-right: 10px;
+}
+QComboBox QAbstractItemView::item {
+   padding: 10px 10px 10px 10px;
+}
+QComboBox QAbstractItemView {
+   color: rgb(0, 93, 168);
+   background: transparent;
+}
+QComboBox QListView::item {
+   background: qradialgradient(
+   cx: 0.5, cy: -1.6, fx: 0.5, fy: 0,
+   radius: 2,
+   stop: 0 #C4C4C4,
+   stop: 1 #DBDBDB );
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgb(0, 93, 168);
+   border-radius: 20px;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QGroupBox" name="groupBoxStatus">
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QRadioButton" name="radioButton_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>341</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Старший государственный инспектор</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>311</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Государственный инспектор</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>100</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Секретарь</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>Только чтение</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="labelStatus">
+      <property name="text">
+       <string>Статус</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="labelRole">
+      <property name="text">
+       <string>Роль</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelFio">
+      <property name="text">
+       <string>ФИО</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>userEditFrm</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>userEditFrm</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

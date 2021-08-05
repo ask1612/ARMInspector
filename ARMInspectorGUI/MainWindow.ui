@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>АРМ Инспектора</string>
+  </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автоматизированное рабочее место инспектора&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableView {
+         Color: white; /* text color in the table */
+         Gridline-color: black; /*The inner frame color*/
+         Background-color: rgb(108, 108, 108); /* background color in the table*/
+    alternate-background-color: rgb(64, 64, 64);
+         Selection-color: white; /* The text color of the selected area*/
+         Selection-background-color: rgb(77, 77, 77); /*The background color of the selected area*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 2px 4px;
+}
+QHeaderView::section {
+    background-color: #646464;
+    padding: 4px;
+    border: 0px;
+    font-size: 14pt;
+}
+QMenuBar {
+  background-color:rgb(89,87,87);
+ min-width: 20px;
+ min-height: 20px;
+ }
+QMenuBar::item {
+     spacing: 3px; /* интервал между пунктами меню */
+                     font-size: 10pt; 
+                     color: rgb(225,225,225);
+                     border: 1px solid rgb(60,60,60);   
+                     background-color:rgb(89,87,87);
+                     padding:2px 2px; 
+                     margin:2px 2px;
+ }
+
+ QMenuBar::item:selected { /* когда выделено с помощью мыши или клавиатуры */
+                     background-color:rgb(235,110,36);
+ }
+
+ QMenuBar::item:pressed {
+                                           border: 1px solid rgb(60,60,61); 
+                                           background-color: rgb(220,80,6);
+ }
+QMenu {
+                     background-color:rgb(89,87,87);
+                     border: 3px solid rgb(235,110,36);
+                     }
+                 QMenu::item {                    
+                     font-size: 10pt; 
+                     color: rgb(225,225,225);
+                     border: 3px solid rgb(60,60,60);   
+                     background-color:rgb(89,87,87);
+                     padding:6px 6px; 
+                     margin:2px 2px;
+                      }
+                QMenu::item:selected {
+                     background-color:rgb(235,110,36);
+                     }
+                 QMenu::item:pressed {
+                                           border: 1px solid rgb(60,60,61); 
+                                           background-color: rgb(220,80,6);
+                                       }
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>839</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="tearOffEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>АРМ Администратора</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionListUsers"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAccount">
+   <property name="text">
+    <string>Account</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Отчёт об АП</string>
+   </property>
+  </action>
+  <action name="actionListUsers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../xmlParser/images/information.png</normaloff>../../xmlParser/images/information.png</iconset>
+   </property>
+   <property name="text">
+    <string>Управление пользователями</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="text">
+    <string>Отчёт</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>true</bool>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
