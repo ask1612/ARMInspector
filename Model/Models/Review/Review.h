@@ -69,11 +69,11 @@ public:
     static const QJsonArray getColumnArray() {
         const QJsonArray jsonArray = {
             "",
-            "№ постановления",
-            "Дата постановления",
-            "На кого вынесно (ФИО)",
-            "Сумма штрафа",
-            "№ протокола",
+            "Исходящий №",
+            "Дата",
+            "Кому направлено",
+            "Входящий №",
+            "Дата",
             ""
         };
         return jsonArray;
