@@ -48,7 +48,7 @@ class Penalty : public JsonSerializable, Model {
 public:
     Penalty();
     virtual ~Penalty();
-    const qint64& getIid() const;
+    const qint64& getId() const;
     const qint64& getNsi4() const;
     const qint64& getNsi11() const;
     const qint64& getStatuteNum() const;
@@ -59,10 +59,10 @@ public:
     const qint64& getNsi6() const;
     const qint64& getNsi7() const;
     const qint64& getNsi8() const;
-    const double& getSsumma() const;
+    const double& getSumma() const;
     const qint64& getDocId() const;
 
-    void setIid(const qint64&);
+    void setId(const qint64&);
     void setNsi4(const qint64&);
     void setNsi11(const qint64&);
     void setStatuteNum(const qint64&);
@@ -73,14 +73,14 @@ public:
     void setNsi6(const qint64&);
     void setNsi7(const qint64&);
     void setNsi8(const qint64&);
-    void setSsumma(const double&);
+    void setSumma(const double&);
     void setDocId(const qint64&);
 
     ///Функции сериализации объекта класса
     ///Считывание JSON объкта в поля класса
     void read(const QJsonObject &jsonObj);
     ///Запись полей класса в JSON объкт. 
-    void write(QJsonObject &jsonObj);
+    void write(QJsonObject &jsonObj) const;
 
     ///Список названий колонок модели
 
