@@ -92,7 +92,7 @@ void Review::read(const QJsonObject &jsonObj) {
     array<QString, REVIEW_COLUMN> fld = Review::getFields();
 
     this->setId(jsonObj[fld[Review::Column::ID]].toInt());
-    this->setNum(jsonObj[fld[Review::Column::NUM]].toString());
+    this->setNum(jsonObj[fld[Review::Column::NUM]].toInt());
     this->setViewDate(jsonObj[fld[Review::Column::VIEW_DATE]].toString());
     this->setNsi11(jsonObj[fld[Review::Column::NSI_11]].toInt());
     this->setInNum(jsonObj[fld[Review::Column::IN_NUM]].toInt());
